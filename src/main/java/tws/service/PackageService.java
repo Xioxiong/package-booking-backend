@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tws.entity.Package;
 import tws.repository.PackageMapper;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -16,5 +17,8 @@ public class PackageService {
         String id = UUID.randomUUID().toString();
         pack.setId(id);
         packageMapper.insert(pack);
+    }
+    public List<Package> getPackages(){
+        return packageMapper.selectAll();
     }
 }

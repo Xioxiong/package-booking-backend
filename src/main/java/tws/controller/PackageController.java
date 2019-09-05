@@ -7,10 +7,10 @@ import tws.service.PackageService;
 import tws.entity.Package;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/packages")
-
 public class PackageController {
 
     @Autowired
@@ -21,5 +21,10 @@ public class PackageController {
     public ResponseEntity<Package> insert(@RequestBody Package pack) {
         packageService.addPackage(pack);
         return ResponseEntity.created(URI.create("/packages/" + pack.getId())).body(pack);
+    }
+    @CrossOrigin
+    @GetMapping("")
+    public ResponseEntity<List<Package>> getAll() {
+        return ResponseEntity.ok(packageService.getPackages());
     }
 }

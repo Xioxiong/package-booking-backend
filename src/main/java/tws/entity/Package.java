@@ -7,14 +7,14 @@ public class Package {
     private String bookingNumber;
     private String name;
     private String phone;
-    private boolean status;
+    private String status;
     private Date bookingDate;
     private int weight;
 
     public Package() {
     }
 
-    public Package(String id, String bookingNumber, String name, String phone, boolean status, Date bookingDate, int weight) {
+    public Package(String id, String bookingNumber, String name, String phone, String status, Date bookingDate, int weight) {
         this.id = id;
         this.bookingNumber = bookingNumber;
         this.name = name;
@@ -56,11 +56,11 @@ public class Package {
         this.phone = phone;
     }
 
-    public boolean isStatus() {
+    public String isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
