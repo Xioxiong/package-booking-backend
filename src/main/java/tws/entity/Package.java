@@ -56,7 +56,7 @@ public class Package {
         this.phone = phone;
     }
 
-    public String isStatus() {
+    public String getStatus() {
         return status;
     }
 

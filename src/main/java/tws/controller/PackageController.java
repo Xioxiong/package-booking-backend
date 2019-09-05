@@ -25,6 +25,7 @@ public class PackageController {
     @CrossOrigin
     @GetMapping("")
     public ResponseEntity<List<Package>> getAll() {
-        return ResponseEntity.ok(packageService.getPackages());
+        List<Package> list = packageService.getPackages();
+        return ResponseEntity.ok(list);
     }
 }

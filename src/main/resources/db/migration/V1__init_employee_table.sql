@@ -9,6 +9,6 @@ CREATE TABLE package (
   name VARCHAR(64) NOT NULL,
   phone VARCHAR(64) NOT NULL,
   status VARCHAR(1) default '1',
-  bookingDate DATE default current_timestamp ,
+  bookingDate DATE default current_time ,
   weight   int(4)
 );
